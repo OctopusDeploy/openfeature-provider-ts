@@ -40,7 +40,11 @@ if (client.getBooleanValue("to-the-moon-feature", false, {})) {
 }
 ```
 
-If the provider cannot retrieve feature flags and has no cached evaluations, `setProviderAndWait` rejects; catch the rejection if your application should start anyway, and every evaluation will return your default value.
+Octopus feature flags are boolean, so evaluate them with `getBooleanValue`. `getStringValue`, `getNumberValue` and `getObjectValue` return your default value with a `TYPE_MISMATCH` error code.
+
+The provider fetches flags when it initializes and saves them in the browser's `localStorage`. If it cannot retrieve them, it falls back to the flags it saved on an earlier page load and logs a warning that they may be stale. If there are none, `setProviderAndWait` rejects; catch the rejection if your application should start anyway, and every evaluation will return your default value.
+
+The provider fetches flags once per initialization, usually once per page load, and doesn't poll for changes. Changing the evaluation context with `OpenFeature.setContext` evaluates the flags it already has against the new context without fetching them again.
 
 ## Configuration
 

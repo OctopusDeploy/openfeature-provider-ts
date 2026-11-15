@@ -38,6 +38,8 @@ if (await client.getBooleanValue("to-the-moon-feature", false, { userid: "bob@oc
 }
 ```
 
+Octopus feature flags are boolean, so evaluate them with `getBooleanValue`. `getStringValue`, `getNumberValue` and `getObjectValue` return your default value with a `TYPE_MISMATCH` error code.
+
 The provider fetches flags when it initializes. If it cannot retrieve them, `setProviderAndWait` rejects and every evaluation returns your default value.
 
 After that, it checks for changes every minute and fetches the flags again only when they have changed. Set `cacheDurationMs` to check more or less often. If a check fails, the provider keeps evaluating against the flags it already has and tries again at the next interval. If initialization failed, it keeps trying and moves to `READY` once the flags can be fetched.
@@ -50,7 +52,7 @@ Polling stops when the provider is closed, for example by `OpenFeature.close()`.
 | --- | --- | --- |
 | `clientIdentifier` | Yes | The client identifier from the Octopus variable `Octopus.FeatureFlags.ClientIdentifier`. |
 | `productMetadata` | Yes | The name and, optionally, version of your application, sent to Octopus for telemetry. |
-| `cacheDurationMs` | No | How long, in milliseconds, between checks for changed flags. Defaults to one minute. |
+| `cacheDurationMs` | No | How long, in milliseconds, between checks for changed flags. Defaults to one minute. Must be greater than 0 and at most 2147483647 (about 24.8 days); for other values, the constructor throws a `RangeError`. |
 | `releaseVersionOverride` | No | Overrides the release version embedded in the client identifier. |
 | `serverUri` | No | The Octopus Feature Flags server to fetch flags from. Defaults to `https://features.octopus.com`. |
 | `logger` | No | An OpenFeature `Logger` for the provider's own log messages. |
