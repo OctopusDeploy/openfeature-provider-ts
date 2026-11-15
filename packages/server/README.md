@@ -52,7 +52,7 @@ Polling stops when the provider is closed, for example by `OpenFeature.close()`.
 | --- | --- | --- |
 | `clientIdentifier` | Yes | The client identifier from the Octopus variable `Octopus.FeatureFlags.ClientIdentifier`. |
 | `productMetadata` | Yes | The name and, optionally, version of your application, sent to Octopus for telemetry. |
-| `cacheDurationMs` | No | How long, in milliseconds, between checks for changed flags. Defaults to one minute. Must be greater than 0 and at most 2147483647 (about 24.8 days); for other values, the constructor throws a `RangeError`. |
+| `cacheDurationMs` | No | How long, in milliseconds, between checks for changed flags. Defaults to one minute. Must be greater than 0. |
 | `releaseVersionOverride` | No | Overrides the release version embedded in the client identifier. |
 | `serverUri` | No | The Octopus Feature Flags server to fetch flags from. Defaults to `https://features.octopus.com`. |
 | `logger` | No | An OpenFeature `Logger` for the provider's own log messages. |
