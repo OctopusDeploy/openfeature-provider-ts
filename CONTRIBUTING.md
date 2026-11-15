@@ -71,7 +71,7 @@ npm run lint       # check
 npm run lint:fix   # fix what can be fixed automatically
 ```
 
-Don't edit `packages/web/src/version.ts` by hand. Release Please updates it with each release.
+Don't edit `packages/web/src/version.ts` or `packages/server/src/version.ts` by hand. Release Please updates them with each release.
 
 ### OpenFeature SDK version
 

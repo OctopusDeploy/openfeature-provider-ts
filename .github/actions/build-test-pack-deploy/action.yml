@@ -30,8 +30,7 @@ runs:
       id: packages
       shell: bash
       # The packages are released in lockstep, so every one listed here is stamped, packed and pushed on every run.
-      # packages/server isn't released yet, so it isn't listed (BMBB-1401).
-      run: echo "paths=packages/core packages/web" >> "$GITHUB_OUTPUT"
+      run: echo "paths=packages/core packages/web packages/server" >> "$GITHUB_OUTPUT"
 
     - name: Compute version
       id: version
@@ -39,7 +38,7 @@ runs:
       run: |
         PATHS="${{ steps.packages.outputs.paths }}"
         BASE=$(node -p "require('./packages/web/package.json').version")
-        # Release Please's linked-versions plugin keeps these equal. If they drift, web's exact pin on core is wrong.
+        # Release Please's linked-versions plugin keeps these equal. If they drift, web's and server's exact pins on core are wrong.
         for path in $PATHS; do
           PKG_VERSION=$(node -p "require('./$path/package.json').version")
           [ "$PKG_VERSION" = "$BASE" ] || { echo "Error: $path is at $PKG_VERSION but packages/web is at $BASE"; exit 1; }
