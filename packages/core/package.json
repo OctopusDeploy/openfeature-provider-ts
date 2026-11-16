@@ -34,7 +34,8 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/OctopusDeploy/openfeature-provider-ts.git"
+        "url": "git+https://github.com/OctopusDeploy/openfeature-provider-ts.git",
+        "directory": "packages/core"
     },
     "keywords": [
         "octopus deploy",
@@ -47,7 +48,7 @@
     "bugs": {
         "url": "https://github.com/OctopusDeploy/openfeature-provider-ts/issues"
     },
-    "homepage": "https://github.com/OctopusDeploy/openfeature-provider-ts#readme",
+    "homepage": "https://github.com/OctopusDeploy/openfeature-provider-ts/tree/main/packages/core#readme",
     "devDependencies": {
         "@openfeature/core": "^1.2.0",
         "@types/murmurhash3js-revisited": "^3.0.3",

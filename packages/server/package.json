@@ -38,7 +38,8 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/OctopusDeploy/openfeature-provider-ts.git"
+        "url": "git+https://github.com/OctopusDeploy/openfeature-provider-ts.git",
+        "directory": "packages/server"
     },
     "keywords": [
         "octopus deploy",
@@ -51,7 +52,7 @@
     "bugs": {
         "url": "https://github.com/OctopusDeploy/openfeature-provider-ts/issues"
     },
-    "homepage": "https://github.com/OctopusDeploy/openfeature-provider-ts#readme",
+    "homepage": "https://github.com/OctopusDeploy/openfeature-provider-ts/tree/main/packages/server#readme",
     "devDependencies": {
         "@openfeature/server-sdk": "^1.23.0",
         "api-surface": "*",
