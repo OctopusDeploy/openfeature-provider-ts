@@ -7,7 +7,7 @@
 | Package | Runs in | OpenFeature SDK | Docs |
 | --- | --- | --- | --- |
 | [![npm](https://img.shields.io/npm/v/@octopusdeploy/openfeature)](https://www.npmjs.com/package/@octopusdeploy/openfeature) `@octopusdeploy/openfeature` | Browsers | [`@openfeature/web-sdk`](https://openfeature.dev/docs/reference/technologies/client/web/) | [README](packages/web/README.md) |
-| [![npm](https://img.shields.io/npm/v/@octopusdeploy/openfeature-server/beta)](https://www.npmjs.com/package/@octopusdeploy/openfeature-server) `@octopusdeploy/openfeature-server` (beta) | Node 22+ | [`@openfeature/server-sdk`](https://openfeature.dev/docs/reference/technologies/server/javascript/) | [README](packages/server/README.md) |
+| [![npm](https://img.shields.io/npm/v/@octopusdeploy/openfeature-server)](https://www.npmjs.com/package/@octopusdeploy/openfeature-server) `@octopusdeploy/openfeature-server` | Node 22+ | [`@openfeature/server-sdk`](https://openfeature.dev/docs/reference/technologies/server/javascript/) | [README](packages/server/README.md) |
 
 Each package's README covers installation and usage, and is the same README npm shows for that package.
 
