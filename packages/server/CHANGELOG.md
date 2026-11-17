@@ -1,5 +1,19 @@
 # Changelog
 
+## [6.2.0](https://github.com/OctopusDeploy/openfeature-provider-ts/compare/server-v6.1.0...server-v6.2.0) (2026-11-17)
+
+
+### Features
+
+* promote server provider to latest ([#207](https://github.com/OctopusDeploy/openfeature-provider-ts/issues/207)) ([b3de3e0](https://github.com/OctopusDeploy/openfeature-provider-ts/commit/b3de3e00177ea46fd5071573e43c69dd3a11dd37))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @octopusdeploy/openfeature-core bumped from 6.1.0 to 6.2.0
+
 ## [6.1.0](https://github.com/OctopusDeploy/openfeature-provider-ts/compare/server-v6.0.0...server-v6.1.0) (2026-11-15)
 
 

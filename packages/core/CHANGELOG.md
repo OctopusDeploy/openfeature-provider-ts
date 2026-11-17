@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.2.0](https://github.com/OctopusDeploy/openfeature-provider-ts/compare/core-v6.1.0...core-v6.2.0) (2026-11-17)
+
+
+### Miscellaneous Chores
+
+* **core:** Synchronize openfeature-providers versions
+
 ## [6.1.0](https://github.com/OctopusDeploy/openfeature-provider-ts/compare/core-v6.0.0...core-v6.1.0) (2026-11-15)
 
 
