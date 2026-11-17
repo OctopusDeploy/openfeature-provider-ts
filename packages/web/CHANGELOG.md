@@ -1,5 +1,19 @@
 # Changelog
 
+## [6.2.0](https://github.com/OctopusDeploy/openfeature-provider-ts/compare/web-v6.1.0...web-v6.2.0) (2026-11-17)
+
+
+### Miscellaneous Chores
+
+* **web:** Synchronize openfeature-providers versions
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @octopusdeploy/openfeature-core bumped from 6.1.0 to 6.2.0
+
 ## [6.1.0](https://github.com/OctopusDeploy/openfeature-provider-ts/compare/web-v6.0.0...web-v6.1.0) (2026-11-15)
 
 
