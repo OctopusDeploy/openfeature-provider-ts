@@ -26,6 +26,8 @@ const provider = new OctopusFeatureProvider({
     productMetadata: new ProductMetadata("YourProductName", "1.0.0"),
 });
 
+// Wait for the flags at startup, so your first requests don't get the default value.
+// In a CommonJS project, run this inside an async function.
 await OpenFeature.setProviderAndWait(provider);
 
 const client = OpenFeature.getClient();
